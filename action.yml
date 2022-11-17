@@ -1,0 +1,16 @@
+name: 'lighthouse-report-formatter'
+description: 'Format Lighthouse report into Markdown Table'
+author: "iyu88"
+inputs:
+  lh_directory:  
+    description: 'directory path to which the lighthouse is applied'
+  mainfest_path:
+    description: 'path to which the reports manifest.json is saved'
+    required: true
+    default: '/lhci_reports'
+runs:
+  using: 'node16'
+  main: 'index.js'
+branding:
+  icon: 'sun'
+  color: 'orange'
