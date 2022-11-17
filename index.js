@@ -1,5 +1,5 @@
-import * as core from "@actions/core";
-import * as fs from 'fs';
+const core = require('@actions/core');
+const fs = require('fs');
 
 const formatLighthouseReportTable = (root_directory, mainfest_path) => {
   const results = JSON.parse(fs.readFileSync(`${root_directory}${mainfest_path}/manifest.json`));
