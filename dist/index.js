@@ -2519,7 +2519,7 @@ const formatLighthouseReportTable = (root_directory, mainfest_path) => {
     const reportRow = (label, score) => `| ${scoreEmoji(score)} ${label} | ${score} |`;
     const detailRow = (label, score, displayValue) => `${reportRow(label, score)} ${displayValue} |`;
 
-    const report = [`⚡️ #${index} Lighthouse Report!`,
+    const report = [`⚡️ Lighthouse Report! - ${index+1}`,
     `| Category | Score |`,
     `| -------- | ----- |`,
     `${reportRow('Performance', summary.performance)}`,
@@ -2528,7 +2528,7 @@ const formatLighthouseReportTable = (root_directory, mainfest_path) => {
     `${reportRow('SEO', summary.seo)}`,
     `${reportRow('PWA', summary.pwa)}`].join('\n');
 
-    const detail = [`🔎 #${index} Performance Details`,
+    const detail = [`🔎 Performance Details - ${index+1}`,
     `| Category | Score | DisplayValue |`,
     `| -------- | ----- | ------------ |`,
     `${detailRow("First Contentful Paint", audits['first-contentful-paint'].score * 100, audits['first-contentful-paint'].displayValue)}`,
