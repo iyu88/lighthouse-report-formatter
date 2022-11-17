@@ -2500,8 +2500,8 @@ exports.default = _default;
 const core = __webpack_require__(360);
 const fs = __webpack_require__(747);
 
-const formatLighthouseReportTable = (root_directory, mainfest_path) => {
-  const results = JSON.parse(fs.readFileSync(`${root_directory}${mainfest_path}/manifest.json`));
+const formatLighthouseReportTable = (root_directory, manifest_path) => {
+  const results = JSON.parse(fs.readFileSync(`${root_directory}${manifest_path}/manifest.json`));
   let comments = "";
 
   results.forEach((result, index) => {
@@ -2541,10 +2541,10 @@ const formatLighthouseReportTable = (root_directory, mainfest_path) => {
 
 async function run () {
   const lh_directory = core.getInput('lh_directory');
-  const mainfest_path = core.getInput('mainfest_path');
+  const manifest_path = core.getInput('manifest_path');
   
   try {
-    const comments = formatLighthouseReportTable(lh_directory, mainfest_path);
+    const comments = formatLighthouseReportTable(lh_directory, manifest_path);
     core.setOutput("comments", comments);
   } catch(err) {
     core.setFailed(err.message);
