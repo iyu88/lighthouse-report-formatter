@@ -8,7 +8,7 @@ Format lighthouse reports into Markdown table.
 
 Directory path to which the lighthouse is applied.
 
-### `mainfest_path`
+### `manifest_path`
 
 **Required** Path to which the reports manifest.json is saved.
 
@@ -24,5 +24,5 @@ String that represents every reports in markdown table format.
 uses: iyu88/lighthouse-report-formatter@v1.0.0
 with:
   lh_directory: ./
-  mainfest_path: lhci_reports
+  manifest_path: lhci_reports
 ```
